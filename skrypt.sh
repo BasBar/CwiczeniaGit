@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ "$1" == --date ]; then
+if [ "$1" == --date ] || [ "$1" == -d ]; then
 	date
 fi
 
-if [ "$1" == "--logs" ]; then
+if [ "$1" == "--logs" ] || [ "$1" == -l ]; then
 	if [ -z "$2" ]; then
 		files=100
 	else
@@ -15,11 +15,9 @@ if [ "$1" == "--logs" ]; then
 		filename="log$i.txt"
 		echo "filename: $filename created by: $0 date: $(date)" > $filename
 	done
-else
-	echo "Invalid argument. Usage $0 [--logs [files]]"
 fi
 
-if [ "$1" == --help ]; then
+if [ "$1" == --help ] || [ "$1" == -h ]; then
 	echo ""
 	echo "You can use flags:"
 	echo ""
