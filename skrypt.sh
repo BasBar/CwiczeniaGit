@@ -44,6 +44,10 @@ if [ "$1" == --help ] || [ "$1" == -h ]; then
 	echo "--logs xxx where xxx is a number to create xxx number of "
 	echo "log files with names, creation dates, and script name"
 	echo ""
+	echo "--errorxxx or -exxx where xxx is a number will create folder"
+	echo "errorxxx which contains xxx number of files with names"
+	echo "creation dates, and script name"
+	echo ""
 	echo "--help to see this message screen"
 	exit 0
 fi
